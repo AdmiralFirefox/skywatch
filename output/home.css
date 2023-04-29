@@ -4,4 +4,67 @@
   box-sizing: border-box;
 }
 
+body {
+  background: url("/images/main-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.home-card {
+  background: hsla(182, 13%, 42%, 0.7);
+  width: min(85%, 45em);
+  margin: 3em auto 3em auto;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+.home-card img {
+  width: 5em;
+}
+.home-card h1 {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.3rem);
+  text-align: center;
+  line-height: 1.3em;
+  margin-top: 1em;
+  font-weight: 700;
+  width: min(15em, 100%);
+}
+.home-card p {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-top: 1em;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  line-height: 1.4em;
+  width: min(25em, 100%);
+}
+.home-card a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  background: #fc6042;
+  color: #ffffff;
+  padding: 0.6em 1.3em;
+  margin-top: 1.5em;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-align: center;
+  transition: background 0.2s ease-in-out;
+}
+.home-card a:hover {
+  background: #fd8068;
+}
+
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  .home-card h1 {
+    font-size: min(max(1.8rem, 5vw), 2.3rem);
+  }
+  .home-card p {
+    font-size: min(max(1.1rem, 3vw), 1.4rem);
+  }
+}
+
 /*# sourceMappingURL=home.css.map */
