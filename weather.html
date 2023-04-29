@@ -10,18 +10,18 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="output/home.css" />
+    <link rel="stylesheet" href="output/weather.css" />
     <title>SkyWatch</title>
+
+    <script defer type="module" src="/main.js"></script>
   </head>
   <body>
-    <section class="home-card">
-      <img src="/web-logo.png" alt="Web Logo" />
-      <h1>SkyWatch: Global Weather Monitoring System</h1>
-      <p>
-        A weather application to know the weather of a specific place, either be
-        a city or country.
-      </p>
-      <a href="weather.html">Start Seaching</a>
-    </section>
+    <div class="input-section">
+      <a href="/">Back to home</a>
+      <form action="/">
+        <input type="text" placeholder="Search a City/Country" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
   </body>
 </html>

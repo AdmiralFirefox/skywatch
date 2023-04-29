@@ -1,0 +1,91 @@
+@use "themeprovider/themeprovider" as theme;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("/images/day-background.jpg") no-repeat top center fixed;
+  background-size: cover;
+}
+
+.input-section {
+  width: min(85%, 45em);
+  margin: 2em auto;
+
+  a {
+    text-decoration: none;
+    color: theme.$dark-sky-blue-color;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5em;
+
+    input {
+      width: 100%;
+      font-family: "Poppins", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 1em;
+      border: none;
+      border-radius: 5px;
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+
+      &::placeholder {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        color: theme.$gray-color;
+      }
+    }
+
+    button {
+      font-family: "Poppins", sans-serif;
+      background: theme.$orange-color;
+      color: theme.$white-color;
+      border: none;
+      border-radius: 5px;
+      padding: 0.6em 1.6em;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-top: 0.6em;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+
+      &:hover {
+        background: theme.$light-orange-color;
+      }
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}
+
+@media (min-width: theme.$media-query-normal-value) {
+  .input-section {
+    form {
+      flex-direction: row;
+
+      button {
+        margin-left: 0.8em;
+        margin-top: 0;
+      }
+    }
+  }
+}
