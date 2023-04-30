@@ -8,7 +8,7 @@ export const displaySectionFourContent = async (latitude, longitude) => {
 
   try {
     const res = await Axios.get(
-      `http://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=${
+      `https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=${
         import.meta.env.VITE_API_KEY
       }`
     );
