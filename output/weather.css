@@ -270,6 +270,46 @@ body {
 .weather-card .section-two .section-two-card img {
   width: 2.5em;
 }
+.weather-card .section-three {
+  margin-top: 2.5em;
+}
+.weather-card .section-three .swiper {
+  width: 100%;
+  height: 100%;
+}
+.weather-card .section-three .swiper .swiper-wrapper .swiper-slide {
+  background: hsl(201, 87%, 83%);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.5em;
+}
+.weather-card .section-three .swiper .swiper-wrapper .swiper-slide p {
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+}
+.weather-card .section-three .swiper .swiper-wrapper .swiper-slide p:nth-of-type(3) {
+  font-size: 1.4rem;
+}
+.weather-card .section-three .swiper .swiper-wrapper .swiper-slide p:last-of-type {
+  font-size: 0.8rem;
+}
+.weather-card .section-three .swiper .swiper-wrapper .swiper-slide img {
+  width: 4em;
+}
+.weather-card .section-three .swiper .swiper-button-next {
+  color: #184059;
+  transform: scale(0.85);
+  font-weight: 700;
+}
+.weather-card .section-three .swiper .swiper-button-prev {
+  color: #184059;
+  transform: scale(0.85);
+  font-weight: 700;
+}
 
 .no-display {
   display: none;

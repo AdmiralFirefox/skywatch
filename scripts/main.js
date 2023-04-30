@@ -1,6 +1,7 @@
 import Axios from "axios";
 import { displaySectionOneContent } from "./sectionone";
 import { displaySectionTwoContent } from "./sectiontwo";
+import { displayPlaceWeatherForecast } from "./sectionthree";
 
 // Inputs
 const placeInputForm = document.querySelector("#place-input-form");
@@ -75,4 +76,5 @@ placeInputForm.addEventListener("submit", (e) => {
   let placeValue = placeInput.value;
 
   displayPlaceWeather(placeValue);
+  displayPlaceWeatherForecast(placeValue);
 });
