@@ -43,7 +43,7 @@ export const displaySectionOneContent = (
 
   // Check if it's Morning or Evening
   const localHour = localDate.getHours();
-  if (localHour >= 6 && localHour < 17) {
+  if (localHour >= 6 && localHour < 18) {
     mainBody.style.background =
       "url('/images/day-background.jpg') no-repeat top center fixed";
     mainBody.style.backgroundSize = "cover";
