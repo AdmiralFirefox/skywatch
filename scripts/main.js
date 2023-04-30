@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { displaySectionOneContent } from "./scripts/sectionone";
+import { displaySectionOneContent } from "./sectionone";
 
 // Inputs
 const placeInputForm = document.querySelector("#place-input-form");
