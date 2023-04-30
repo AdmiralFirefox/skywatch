@@ -357,6 +357,27 @@ body {
       }
     }
   }
+
+  .section-four {
+    .air-quality-index {
+      border-radius: 5px;
+      padding: 1em;
+      width: min(13em, 95%);
+      margin: 2em auto 0em auto;
+
+      p:first-of-type {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        font-weight: 400;
+      }
+
+      p:last-of-type {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 1.35rem;
+      }
+    }
+  }
 }
 
 .no-display {

@@ -2,6 +2,7 @@ import Axios from "axios";
 import { displaySectionOneContent } from "./sectionone";
 import { displaySectionTwoContent } from "./sectiontwo";
 import { displayPlaceWeatherForecast } from "./sectionthree";
+import { displaySectionFourContent } from "./sectionfour";
 
 // Inputs
 const placeInputForm = document.querySelector("#place-input-form");
@@ -61,6 +62,9 @@ const displayPlaceWeather = async (place) => {
       weather.visibility,
       weather.clouds.all
     );
+
+    // Section Four
+    displaySectionFourContent(weather.coord.lat, weather.coord.lon);
   } catch (err) {
     console.log(err);
     placeInput.value = "";
