@@ -1,5 +1,6 @@
 import Axios from "axios";
 import { displaySectionOneContent } from "./sectionone";
+import { displaySectionTwoContent } from "./sectiontwo";
 
 // Inputs
 const placeInputForm = document.querySelector("#place-input-form");
@@ -46,6 +47,18 @@ const displayPlaceWeather = async (place) => {
       weatherCard,
       errorCard,
       loadingCard
+    );
+
+    // Section Two
+    displaySectionTwoContent(
+      weather.sys.sunrise,
+      weather.timezone,
+      weather.sys.sunset,
+      weather.main.humidity,
+      weather.main.pressure,
+      weather.wind.speed,
+      weather.visibility,
+      weather.clouds.all
     );
   } catch (err) {
     console.log(err);

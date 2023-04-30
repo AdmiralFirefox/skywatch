@@ -196,7 +196,7 @@ body {
   width: min(85%, 45em);
   margin: 0em auto 3em auto;
   border-radius: 5px;
-  padding: 2.5em;
+  padding: 2.5em 1.5em;
 
   .section-one {
     display: flex;
@@ -270,6 +270,42 @@ body {
       }
     }
   }
+
+  .section-two {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    grid-gap: 1em;
+    margin-top: 2em;
+
+    .section-two-card {
+      background: theme.$silver-color;
+      padding: 1em;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      p:first-of-type {
+        font-family: "Poppins", sans-serif;
+        color: theme.$black-color;
+        font-size: 0.85rem;
+        text-align: center;
+        margin-top: 0.5em;
+      }
+
+      p:last-of-type {
+        font-family: "Poppins", sans-serif;
+        color: theme.$black-color;
+        font-weight: 700;
+        font-size: 1.35rem;
+        text-align: center;
+      }
+
+      img {
+        width: 2.5em;
+      }
+    }
+  }
 }
 
 .no-display {
@@ -302,6 +338,34 @@ body {
 
       .section-one-temp {
         margin-right: 2em;
+      }
+    }
+  }
+}
+
+@media (min-width: theme.$media-query-very-small-value) {
+  .weather-card {
+    padding: 2.5em;
+
+    .section-two {
+      grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+
+      .section-two-card {
+        flex-direction: row;
+        justify-content: space-between;
+
+        p:first-of-type {
+          text-align: left;
+          margin-top: 0em;
+        }
+
+        p:last-of-type {
+          text-align: left;
+        }
+
+        img {
+          margin-left: 0.5em;
+        }
       }
     }
   }

@@ -175,7 +175,7 @@ body {
   width: min(85%, 45em);
   margin: 0em auto 3em auto;
   border-radius: 5px;
-  padding: 2.5em;
+  padding: 2.5em 1.5em;
 }
 .weather-card .section-one {
   display: flex;
@@ -239,6 +239,37 @@ body {
   margin-left: 0.5em;
   font-size: 1.8rem;
 }
+.weather-card .section-two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  grid-gap: 1em;
+  margin-top: 2em;
+}
+.weather-card .section-two .section-two-card {
+  background: #daf3f7;
+  padding: 1em;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.weather-card .section-two .section-two-card p:first-of-type {
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 0.5em;
+}
+.weather-card .section-two .section-two-card p:last-of-type {
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.35rem;
+  text-align: center;
+}
+.weather-card .section-two .section-two-card img {
+  width: 2.5em;
+}
 
 .no-display {
   display: none;
@@ -264,6 +295,28 @@ body {
   }
   .weather-card .section-one .section-one-temp {
     margin-right: 2em;
+  }
+}
+@media (min-width: 38em) {
+  .weather-card {
+    padding: 2.5em;
+  }
+  .weather-card .section-two {
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+  }
+  .weather-card .section-two .section-two-card {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .weather-card .section-two .section-two-card p:first-of-type {
+    text-align: left;
+    margin-top: 0em;
+  }
+  .weather-card .section-two .section-two-card p:last-of-type {
+    text-align: left;
+  }
+  .weather-card .section-two .section-two-card img {
+    margin-left: 0.5em;
   }
 }
 @supports not (font-size: clamp(1rem, 1vw, 1rem)) {
