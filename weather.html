@@ -18,10 +18,53 @@
   <body>
     <div class="input-section">
       <a href="/">Back to home</a>
-      <form action="/">
-        <input type="text" placeholder="Search a City/Country" />
+      <form action="/" id="place-input-form">
+        <input
+          type="text"
+          placeholder="Search a City/Country"
+          id="place-input"
+          required
+        />
         <button type="submit">Search</button>
       </form>
+    </div>
+
+    <section class="initial-content-card" id="initial-content-card">
+      <h1>Search for a City or Country</h1>
+      <p>Suggestion: Try searching your place to get started.</p>
+    </section>
+
+    <div class="loading-card no-display" id="loading-card">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <h1>Loading...</h1>
+    </div>
+
+    <section class="error-card no-display" id="error-card">
+      <h1>Such Place Doesn't Exist</h1>
+      <p>Make sure to double check the spelling or if it even exist.</p>
+    </section>
+
+    <div class="weather-card no-display" id="weather-card">
+      <div class="section-one">
+        <div class="section-one-info">
+          <p id="weather-location"></p>
+          <p id="location-date"></p>
+          <img id="weather-icon" alt="Weather Icon" />
+          <p id="weather-condition"></p>
+        </div>
+        <div class="section-one-temp">
+          <h1 id="main-temp"></h1>
+          <div>
+            <h2 id="min-temp"></h2>
+            <h2 id="max-temp"></h2>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

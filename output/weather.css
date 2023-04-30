@@ -66,6 +66,184 @@ body {
   outline: none;
 }
 
+.initial-content-card {
+  background: hsla(182, 13%, 42%, 0.7);
+  width: min(85%, 45em);
+  margin: 0em auto 3em auto;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+.initial-content-card h1 {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.3rem);
+  text-align: center;
+  line-height: 1.3em;
+  font-weight: 700;
+  width: min(15em, 100%);
+}
+.initial-content-card p {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-top: 1em;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  line-height: 1.4em;
+  width: min(25em, 100%);
+}
+
+.loading-card {
+  background: hsla(182, 13%, 42%, 0.7);
+  width: min(85%, 45em);
+  margin: 0em auto 3em auto;
+  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+.loading-card .lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loading-card .lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #ffffff transparent transparent transparent;
+}
+.loading-card .lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.loading-card .lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.loading-card .lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+.loading-card h1 {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.3rem);
+  text-align: center;
+  line-height: 1.3em;
+  font-weight: 700;
+  margin-top: 0.3em;
+}
+
+.error-card {
+  background: hsla(182, 13%, 42%, 0.7);
+  width: min(85%, 45em);
+  margin: 0em auto 3em auto;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+.error-card h1 {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.3rem);
+  text-align: center;
+  line-height: 1.3em;
+  font-weight: 700;
+  width: min(15em, 100%);
+}
+.error-card p {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-top: 1em;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  line-height: 1.4em;
+  width: min(25em, 100%);
+}
+
+.weather-card {
+  background: hsla(182, 13%, 42%, 0.7);
+  width: min(85%, 45em);
+  margin: 0em auto 3em auto;
+  border-radius: 5px;
+  padding: 2.5em;
+}
+.weather-card .section-one {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.weather-card .section-one .section-one-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 0.5em;
+}
+.weather-card .section-one .section-one-info p:first-of-type {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 2.1rem;
+}
+.weather-card .section-one .section-one-info p:nth-of-type(2) {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.weather-card .section-one .section-one-info p:last-of-type {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.weather-card .section-one .section-one-info img {
+  width: 5.5em;
+}
+.weather-card .section-one .section-one-temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 3.6em;
+}
+.weather-card .section-one .section-one-temp h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 4rem;
+}
+.weather-card .section-one .section-one-temp div {
+  display: flex;
+  align-items: center;
+}
+.weather-card .section-one .section-one-temp div h2:first-of-type {
+  font-family: "Poppins", sans-serif;
+  color: #81b7e4;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.weather-card .section-one .section-one-temp div h2:last-of-type {
+  font-family: "Poppins", sans-serif;
+  color: #fd8068;
+  font-weight: 400;
+  margin-left: 0.5em;
+  font-size: 1.8rem;
+}
+
+.no-display {
+  display: none;
+}
+
 @media (min-width: 46em) {
   .input-section form {
     flex-direction: row;
@@ -73,6 +251,44 @@ body {
   .input-section form button {
     margin-left: 0.8em;
     margin-top: 0;
+  }
+  .weather-card .section-one {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .weather-card .section-one .section-one-info {
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0.5em;
+    margin-top: 0em;
+  }
+  .weather-card .section-one .section-one-temp {
+    margin-right: 2em;
+  }
+}
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  .initial-content-card h1 {
+    font-size: min(max(1.8rem, 5vw), 2.3rem);
+  }
+  .initial-content-card p {
+    font-size: min(max(1.1rem, 3vw), 1.4rem);
+  }
+  .error-card h1 {
+    font-size: min(max(1.8rem, 5vw), 2.3rem);
+  }
+  .error-card p {
+    font-size: min(max(1.1rem, 3vw), 1.4rem);
+  }
+  .loading-card h1 {
+    font-size: min(max(1.8rem, 5vw), 2.3rem);
+  }
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 

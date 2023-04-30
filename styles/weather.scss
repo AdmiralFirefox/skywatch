@@ -77,6 +77,205 @@ body {
   }
 }
 
+.initial-content-card {
+  background: theme.$transparent-light-sky-blue-color;
+  width: min(85%, 45em);
+  margin: 0em auto 3em auto;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+
+  h1 {
+    color: theme.$white-color;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.3rem);
+    text-align: center;
+    line-height: 1.3em;
+    font-weight: 700;
+    width: min(15em, 100%);
+  }
+
+  p {
+    color: theme.$white-color;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin-top: 1em;
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    line-height: 1.4em;
+    width: min(25em, 100%);
+  }
+}
+
+.loading-card {
+  background: theme.$transparent-light-sky-blue-color;
+  width: min(85%, 45em);
+  margin: 0em auto 3em auto;
+  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+
+  .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border: 8px solid theme.$white-color;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: theme.$white-color transparent transparent transparent;
+  }
+
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+
+  h1 {
+    color: theme.$white-color;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.3rem);
+    text-align: center;
+    line-height: 1.3em;
+    font-weight: 700;
+    margin-top: 0.3em;
+  }
+}
+
+.error-card {
+  background: theme.$transparent-light-sky-blue-color;
+  width: min(85%, 45em);
+  margin: 0em auto 3em auto;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+
+  h1 {
+    color: theme.$white-color;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.3rem);
+    text-align: center;
+    line-height: 1.3em;
+    font-weight: 700;
+    width: min(15em, 100%);
+  }
+
+  p {
+    color: theme.$white-color;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin-top: 1em;
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    line-height: 1.4em;
+    width: min(25em, 100%);
+  }
+}
+
+.weather-card {
+  background: theme.$transparent-light-sky-blue-color;
+  width: min(85%, 45em);
+  margin: 0em auto 3em auto;
+  border-radius: 5px;
+  padding: 2.5em;
+
+  .section-one {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .section-one-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 0.5em;
+
+      p:first-of-type {
+        font-family: "Poppins", sans-serif;
+        color: theme.$white-color;
+        font-weight: 400;
+        font-size: 2.1rem;
+      }
+
+      p:nth-of-type(2) {
+        font-family: "Poppins", sans-serif;
+        color: theme.$white-color;
+        font-weight: 400;
+        font-size: 1rem;
+      }
+
+      p:last-of-type {
+        font-family: "Poppins", sans-serif;
+        color: theme.$white-color;
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
+
+      img {
+        width: 5.5em;
+      }
+    }
+
+    .section-one-temp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 3.6em;
+
+      h1 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        color: theme.$white-color;
+        font-size: 4rem;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+
+        h2:first-of-type {
+          font-family: "Poppins", sans-serif;
+          color: theme.$light-blue-color;
+          font-weight: 400;
+          font-size: 1.8rem;
+        }
+
+        h2:last-of-type {
+          font-family: "Poppins", sans-serif;
+          color: theme.$light-orange-color;
+          font-weight: 400;
+          margin-left: 0.5em;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+.no-display {
+  display: none;
+}
+
 @media (min-width: theme.$media-query-normal-value) {
   .input-section {
     form {
@@ -87,5 +286,60 @@ body {
         margin-top: 0;
       }
     }
+  }
+
+  .weather-card {
+    .section-one {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .section-one-info {
+        align-items: flex-start;
+        text-align: left;
+        margin-left: 0.5em;
+        margin-top: 0em;
+      }
+
+      .section-one-temp {
+        margin-right: 2em;
+      }
+    }
+  }
+}
+
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  .initial-content-card {
+    h1 {
+      font-size: min(max(1.8rem, 5vw), 2.3rem);
+    }
+
+    p {
+      font-size: min(max(1.1rem, 3vw), 1.4rem);
+    }
+  }
+
+  .error-card {
+    h1 {
+      font-size: min(max(1.8rem, 5vw), 2.3rem);
+    }
+
+    p {
+      font-size: min(max(1.1rem, 3vw), 1.4rem);
+    }
+  }
+
+  .loading-card {
+    h1 {
+      font-size: min(max(1.8rem, 5vw), 2.3rem);
+    }
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
