@@ -42,7 +42,10 @@ const displayPlaceWeather = async (place) => {
       weather.dt,
       weather.timezone,
       weather.weather[0].icon,
-      weather.weather[0].description
+      weather.weather[0].description,
+      weatherCard,
+      errorCard,
+      loadingCard
     );
   } catch (err) {
     console.log(err);

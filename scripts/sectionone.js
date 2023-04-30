@@ -9,8 +9,14 @@ export const displaySectionOneContent = (
   locationDateValue,
   timeZoneOffSetValue,
   icon,
-  condition
+  condition,
+  weatherCard,
+  errorCard,
+  loadingCard
 ) => {
+  const mainBody = document.body;
+  const backToHome = document.querySelector("#back-to-home");
+
   const mainTemp = document.querySelector("#main-temp");
   const minTemp = document.querySelector("#min-temp");
   const maxTemp = document.querySelector("#max-temp");
@@ -34,4 +40,24 @@ export const displaySectionOneContent = (
   locationDate.textContent = formattedDate;
   weatherIcon.src = `https://openweathermap.org/img/wn/${icon}.png`;
   weatherCondition.textContent = condition;
+
+  // Check if it's Morning or Evening
+  const localHour = localDate.getHours();
+  if (localHour >= 6 && localHour < 17) {
+    mainBody.style.background =
+      "url('/images/day-background.jpg') no-repeat top center fixed";
+    mainBody.style.backgroundSize = "cover";
+    backToHome.style.color = "#184059";
+    weatherCard.style.background = "hsla(202, 58%, 35%, 0.75)";
+    errorCard.style.background = "hsla(202, 58%, 35%, 0.75)";
+    loadingCard.style.background = "hsla(202, 58%, 35%, 0.75)";
+  } else {
+    mainBody.style.background =
+      "url('/images/night-background.jpg') no-repeat top center fixed";
+    mainBody.style.backgroundSize = "cover";
+    backToHome.style.color = "#ffffff";
+    weatherCard.style.background = "hsla(254, 14%, 45%, 0.75)";
+    errorCard.style.background = "hsla(254, 14%, 45%, 0.75)";
+    loadingCard.style.background = "hsla(254, 14%, 45%, 0.75)";
+  }
 };
