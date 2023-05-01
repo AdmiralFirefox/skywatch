@@ -13,7 +13,7 @@ body {
 
 .input-section {
   width: min(85%, 45em);
-  margin: 2em auto;
+  margin: 2.2em auto 2em auto;
 
   a {
     text-decoration: none;
@@ -31,14 +31,14 @@ body {
   form {
     display: flex;
     flex-direction: column;
-    margin-top: 1.3em;
+    margin-top: 1.35em;
 
     input {
       width: 100%;
       font-family: "Poppins", sans-serif;
-      font-size: 0.9rem;
-      font-weight: 700;
-      padding: 1em;
+      font-size: 1.05rem;
+      font-weight: 400;
+      padding: 0.75em 1em;
       border: none;
       border-radius: 5px;
 
@@ -387,17 +387,6 @@ body {
 }
 
 @media (min-width: theme.$media-query-normal-value) {
-  .input-section {
-    form {
-      flex-direction: row;
-
-      button {
-        margin-left: 0.8em;
-        margin-top: 0;
-      }
-    }
-  }
-
   .weather-card {
     .section-one {
       flex-direction: row;
@@ -418,6 +407,17 @@ body {
 }
 
 @media (min-width: theme.$media-query-very-small-value) {
+  .input-section {
+    form {
+      flex-direction: row;
+
+      button {
+        margin-left: 0.8em;
+        margin-top: 0;
+      }
+    }
+  }
+
   .weather-card {
     padding: 2.5em;
 
