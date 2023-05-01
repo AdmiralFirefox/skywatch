@@ -6,7 +6,6 @@ export const displaySectionOneContent = (
   max,
   place,
   country,
-  locationDateValue,
   timeZoneOffSetValue,
   icon,
   condition,
@@ -25,7 +24,10 @@ export const displaySectionOneContent = (
   const weatherIcon = document.querySelector("#weather-icon");
   const weatherCondition = document.querySelector("#weather-condition");
 
-  const timestamp = locationDateValue;
+  let currentTime = new Date().getTime();
+  currentTime = (currentTime - (currentTime % 1000)) / 1000;
+
+  const timestamp = currentTime;
   const timeZoneOffset = timeZoneOffSetValue;
   const date = new Date(timestamp * 1000);
   const localTimestamp =

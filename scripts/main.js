@@ -42,7 +42,6 @@ const displayPlaceWeather = async (place) => {
       weather.main.temp_max,
       weather.name,
       weather.sys.country,
-      weather.dt,
       weather.timezone,
       weather.weather[0].icon,
       weather.weather[0].description,
