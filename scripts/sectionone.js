@@ -73,7 +73,7 @@ export const displaySectionOneContent = (
     mainBody.style.background =
       "url('/images/night-background.jpg') no-repeat top center fixed";
     mainBody.style.backgroundSize = "cover";
-    backToHome.style.background = "#4A455B";
+    backToHome.style.background = "hsl(254, 14%, 40%)";
     weatherCard.style.background = "hsla(254, 14%, 45%, 0.75)";
     errorCard.style.background = "hsla(254, 14%, 45%, 0.75)";
     loadingCard.style.background = "hsla(254, 14%, 45%, 0.75)";
@@ -81,7 +81,7 @@ export const displaySectionOneContent = (
     backToHome.addEventListener(
       "mouseenter",
       (e) => {
-        e.target.style.background = "hsl(254, 14%, 41%)";
+        e.target.style.background = "hsl(254, 14%, 50%)";
       },
       false
     );
@@ -89,7 +89,7 @@ export const displaySectionOneContent = (
     backToHome.addEventListener(
       "mouseleave",
       (e) => {
-        e.target.style.background = "#4A455B";
+        e.target.style.background = "hsl(254, 14%, 40%)";
       },
       false
     );
