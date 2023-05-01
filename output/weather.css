@@ -15,17 +15,19 @@ body {
 }
 .input-section a {
   text-decoration: none;
-  color: #184059;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
+  background: #18425a;
+  color: #ffffff;
+  padding: 0.4em;
+  font-size: 1.25rem;
+  border-radius: 5px;
 }
 .input-section a:hover {
-  text-decoration: underline;
+  background: hsl(202, 58%, 32%);
 }
 .input-section form {
   display: flex;
   flex-direction: column;
-  margin-top: 0.5em;
+  margin-top: 1.3em;
 }
 .input-section form input {
   width: 100%;

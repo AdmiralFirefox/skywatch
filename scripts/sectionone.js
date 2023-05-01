@@ -49,17 +49,49 @@ export const displaySectionOneContent = (
     mainBody.style.background =
       "url('/images/day-background.jpg') no-repeat top center fixed";
     mainBody.style.backgroundSize = "cover";
-    backToHome.style.color = "#184059";
+    backToHome.style.background = "#18425A";
     weatherCard.style.background = "hsla(202, 58%, 35%, 0.75)";
     errorCard.style.background = "hsla(202, 58%, 35%, 0.75)";
     loadingCard.style.background = "hsla(202, 58%, 35%, 0.75)";
+
+    backToHome.addEventListener(
+      "mouseenter",
+      (e) => {
+        e.target.style.background = "hsl(202, 58%, 32%)";
+      },
+      false
+    );
+
+    backToHome.addEventListener(
+      "mouseleave",
+      (e) => {
+        e.target.style.background = "#18425A";
+      },
+      false
+    );
   } else {
     mainBody.style.background =
       "url('/images/night-background.jpg') no-repeat top center fixed";
     mainBody.style.backgroundSize = "cover";
-    backToHome.style.color = "#ffffff";
+    backToHome.style.background = "#4A455B";
     weatherCard.style.background = "hsla(254, 14%, 45%, 0.75)";
     errorCard.style.background = "hsla(254, 14%, 45%, 0.75)";
     loadingCard.style.background = "hsla(254, 14%, 45%, 0.75)";
+
+    backToHome.addEventListener(
+      "mouseenter",
+      (e) => {
+        e.target.style.background = "hsl(254, 14%, 41%)";
+      },
+      false
+    );
+
+    backToHome.addEventListener(
+      "mouseleave",
+      (e) => {
+        e.target.style.background = "#4A455B";
+      },
+      false
+    );
   }
 };
